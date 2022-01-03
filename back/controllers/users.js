@@ -6,7 +6,6 @@ require('dotenv').config();
 
 const schema = require("../models/password");
 
-// Utiliser import plutôt que require
 const User = require('../models/user');
 
 
