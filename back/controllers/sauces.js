@@ -18,8 +18,8 @@ exports.createSauce = (req, res, next) => {
       imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
       likes: 0,
       dislikes: 0,
-      usersLiked: [''],
-      usersDisliked: [''],
+      usersLiked: [],
+      usersDisliked: [],
     });
     sauce.save()// Enregistre dans la database l'objet et renvoie une promesse
       .then(() => res.status(201).json({ message: 'Nouvelle sauce enregistrée !'}))
